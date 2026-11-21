@@ -12,6 +12,8 @@ This repository is intentionally separate from Ptah's application-development re
 - Production URL: `https://ptah-official.pages.dev/`
 - Deployment trigger: every push to `main`
 - Build configuration is maintained in Cloudflare Pages; the site is built from the `public/` directory without a build command.
+- Visitor counters use a Pages Function and the D1 database `ptah-visits`.
+- The D1 binding name is `PTAH_VISITS`; `wrangler.toml` records the non-secret binding configuration.
 
 ## Updating the site
 
@@ -27,6 +29,17 @@ git push origin main
 ```
 
 Cloudflare Pages deploys the `main` commit automatically. The `public/` directory is the only deployment source.
+
+## Visitor counting
+
+The homepage counts one estimated human visit per 24-hour first-party cookie window.
+It separately counts requests whose User-Agent explicitly matches a known AI
+crawler or agent. Generic analytics bots are excluded. The implementation stores
+only aggregate `human` and `ai` totals in D1; it does not store IP addresses,
+identifiers, request paths, or browsing history.
+
+The AI value is a heuristic request count, not a guarantee that a particular
+visitor was an AI.
 
 ## Source provenance
 

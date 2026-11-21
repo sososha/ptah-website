@@ -29,6 +29,7 @@
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="alternate" type="text/markdown" href="about.md" title="Ptah overview (Markdown)">
   <link rel="describedby" href="llms.txt" type="text/plain">
+  <script src="visitor-counter.js" defer></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -113,6 +114,15 @@
     .muted { color: #697179; }
     footer { border-top: 1px solid #c9cdd0; padding-top: 19px; font-size: 12px; color: #626b73; }
     .footer-links { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 0 0 8px; }
+    .visit-counter {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 20px;
+      margin: 0 0 10px;
+      font-variant-numeric: tabular-nums;
+    }
+    .visit-counter strong { color: #20262c; font-weight: 700; }
+    .counter-note { margin-top: 4px; font-size: 11px; }
     @media (max-width: 530px) {
       main { padding-top: 44px; }
       header { padding-bottom: 30px; }
@@ -180,11 +190,16 @@
     </section>
 
     <footer>
+      <div class="visit-counter" id="visit-counter" aria-label="公開開始後の推定アクセス数">
+        <span>来訪者 <strong id="human-visits">—</strong></span>
+        <span>AIアクセス <strong id="ai-visits">—</strong></span>
+      </div>
       <div class="footer-links">
         <a href="about.md">概要</a>
         <a href="llms.txt">AI向け情報</a>
       </div>
       <div>Ptah / Semantic CAD — 2026</div>
+      <div class="counter-note">来訪者は24時間Cookieで重複を抑えた推定値、AIは公開されているBot User-Agentを持つアクセス要求の推定値です。</div>
     </footer>
   </main>
 </body>

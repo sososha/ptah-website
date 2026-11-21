@@ -1,0 +1,8 @@
+name = "ptah-official"
+pages_build_output_dir = "public"
+compatibility_date = "2026-11-21"
+
+[[d1_databases]]
+binding = "PTAH_VISITS"
+database_name = "ptah-visits"
+database_id = "d3dc9e91-66d1-4ff9-9593-7aa7f1402936"
