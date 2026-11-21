@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ptah（ピタ）は、日本の木造建築を中心に開発中のセマンティックCADです。形状だけでなく、建築要素・関係・拘束・設計判断とその根拠を扱います。">
+  <meta name="theme-color" content="#26355f">
+  <meta name="color-scheme" content="light">
+  <link rel="canonical" href="https://ptah-official.pages.dev/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ptah-official.pages.dev/">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="Ptah">
+  <meta property="og:title" content="Ptah（ピタ）— セマンティックCAD">
+  <meta property="og:description" content="建築を、意味から記述する。日本の木造建築を中心に開発中のセマンティックCAD。">
+  <meta property="og:image" content="https://ptah-official.pages.dev/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Ptah — Semantic CAD for Japanese timber buildings">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ptah（ピタ）— セマンティックCAD">
+  <meta name="twitter:description" content="建築を、意味から記述する。日本の木造建築を中心に開発中。">
+  <meta name="twitter:image" content="https://ptah-official.pages.dev/og-image.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="favicon-16.png" type="image/png" sizes="16x16">
+  <link rel="alternate icon" href="favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="alternate" type="text/markdown" href="about.md" title="Ptah overview (Markdown)">
+  <link rel="describedby" href="llms.txt" type="text/plain">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "name": "Ptah",
+        "alternateName": "ピタ",
+        "description": "日本の木造建築を中心に開発中のセマンティックCAD、Ptahの公式サイト。",
+        "url": "https://ptah-official.pages.dev/",
+        "inLanguage": "ja",
+        "image": "https://ptah-official.pages.dev/og-image.png"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Ptah",
+        "alternateName": "ピタ",
+        "applicationCategory": "DesignApplication",
+        "creativeWorkStatus": "https://schema.org/Prototype",
+        "description": "日本の木造建築を中心に、建築要素、関係、拘束、設計判断と根拠を扱う開発中のセマンティックCAD。一般向けダウンロードはまだ提供されていません。",
+        "url": "https://ptah-official.pages.dev/",
+        "inLanguage": ["ja"]
+      }
+    ]
+  }
+  </script>
+  <title>Ptah（ピタ）— セマンティックCAD</title>
+  <style>
+    :root { color-scheme: light; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: #fafaf8;
+      color: #20262c;
+      font: 16px/1.85 -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+    }
+    .skip-link {
+      position: absolute;
+      left: 12px;
+      top: -80px;
+      z-index: 10;
+      padding: 8px 12px;
+      background: #fff;
+      color: #124b95;
+    }
+    .skip-link:focus { top: 12px; }
+    main { width: min(100% - 44px, 760px); margin: 0 auto; padding: 70px 0 64px; }
+    a { color: #124b95; text-decoration: underline; text-underline-offset: 3px; }
+    a:hover { color: #052d64; }
+    a:focus-visible { outline: 2px solid #124b95; outline-offset: 3px; }
+    header { padding-bottom: 36px; border-bottom: 1px solid #c9cdd0; }
+    .eyebrow {
+      font: 12px/1.4 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      color: #636b72;
+      letter-spacing: .10em;
+    }
+    .site-brand { display: flex; align-items: center; gap: 16px; }
+    .site-brand img { width: 76px; height: 76px; flex: none; }
+    h1 { margin: 10px 0 6px; font: 600 clamp(55px, 10vw, 80px)/1.12 Georgia, "Times New Roman", serif; letter-spacing: -.055em; }
+    .lead { margin: 20px 0 12px; font-size: clamp(18px, 3vw, 21px); font-weight: 600; line-height: 1.6; }
+    .intro { margin: 0; max-width: 39em; color: #3e454c; }
+    .flag {
+      display: inline-block;
+      margin-top: 23px;
+      border: 1px solid #aab2b8;
+      padding: 2px 10px;
+      font-size: 12px;
+      color: #46525e;
+    }
+    nav { padding: 26px 0 28px; }
+    nav ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 3px; }
+    nav li::before { content: "●"; font-size: 8px; margin-right: 10px; color: #67737b; vertical-align: 2px; }
+    section { padding: 24px 0 30px; border-top: 1px solid #d8dce0; }
+    h2 { margin: 0 0 12px; font-size: 17px; font-weight: 700; }
+    h3 { margin: 20px 0 5px; font-size: 15px; }
+    p { margin: 0 0 13px; }
+    p:last-child { margin-bottom: 0; }
+    .plain-list { margin: 0; padding-left: 1.25rem; }
+    .plain-list li + li { margin-top: 5px; }
+    .note { border-left: 3px solid #aab2b8; padding-left: 14px; color: #4f5860; }
+    .muted { color: #697179; }
+    footer { border-top: 1px solid #c9cdd0; padding-top: 19px; font-size: 12px; color: #626b73; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 0 0 8px; }
+    @media (max-width: 530px) {
+      main { padding-top: 44px; }
+      header { padding-bottom: 30px; }
+      .site-brand img { width: 64px; height: 64px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#content">本文へ移動</a>
+  <main id="content">
+    <header>
+      <div class="eyebrow">SEMANTIC CAD / BUILDING DECISION MODEL</div>
+      <div class="site-brand">
+        <img src="ptah-dawn.png" alt="" width="76" height="76">
+        <h1>Ptah</h1>
+      </div>
+      <p class="lead">建築を、意味から記述する。</p>
+      <p class="intro">Ptah（ピタ）は、日本の木造建築を中心に開発中のセマンティックCADです。形だけでなく、建築要素の関係、拘束、設計判断とその根拠を扱います。</p>
+      <span class="flag">開発中 / Development in progress</span>
+    </header>
+
+    <nav aria-label="ページ内メニュー">
+      <ul>
+        <li><a href="#about">Ptahについて</a></li>
+        <li><a href="#direction">目指す機能</a></li>
+        <li><a href="#status">公開状況</a></li>
+        <li><a href="#documents">公開文書</a></li>
+      </ul>
+    </nav>
+
+    <section id="about">
+      <h2>Ptahについて</h2>
+      <p>Ptahは、建築を線や面だけの集合ではなく、意味のある要素と関係のモデルとして扱うCADを目指しています。何を配置したかだけでなく、なぜその値や関係が採用されたかを追跡できることが、設計意図を保つために重要だと考えています。</p>
+      <p>開発の重点は日本の木造建築です。一般化した汎用基盤の完成度ではなく、実在の建築を最後まで扱えることを重視して開発しています。</p>
+    </section>
+
+    <section id="direction">
+      <h2>目指す機能</h2>
+      <p class="note">以下は製品の方向性です。現在の配布版で完成済みであることを意味しません。</p>
+      <ul class="plain-list">
+        <li>建築要素、部材、空間、階、寸法関係などを意味のある対象として扱う</li>
+        <li>仕様（Specification）と施工方法・ルール（Method / Rule）を設計モデルへ適用する</li>
+        <li>曖昧さ、不足、矛盾、未決定事項を隠さず保持する</li>
+        <li>入力と計算結果の根拠、依存関係、鮮度を追跡する</li>
+        <li>建築モデルから図面や仕様情報などの成果物を導出する</li>
+        <li>保存・再開と履歴を、設計上の意味を保ったまま扱う</li>
+      </ul>
+    </section>
+
+    <section id="status">
+      <h2>公開状況</h2>
+      <p>Ptahは現在開発中です。一般向けバイナリ、価格、公開API、MCPサーバー、プラグイン、AIエージェント向け操作環境は、このサイトでは提供していません。</p>
+      <p>機能、データ形式、更新時期は開発に応じて変更される可能性があります。現時点で実務利用に関する適合性・安全性を保証するものではありません。</p>
+    </section>
+
+    <section id="documents">
+      <h2>公開文書</h2>
+      <p>人とAIエージェントが、Ptahの用途と公開範囲を確認できる文書を用意しています。</p>
+      <ul class="plain-list">
+        <li><a href="about.md">製品概要（Markdown）</a> — 目的、開発状態、提供していないもの</li>
+        <li><a href="llms.txt">llms.txt</a> — AIエージェント向けの公開情報インデックス</li>
+        <li><a href="llms-full.txt">llms-full.txt</a> — 参照しやすい統合テキスト</li>
+      </ul>
+    </section>
+
+    <footer>
+      <div class="footer-links">
+        <a href="about.md">概要</a>
+        <a href="llms.txt">AI向け情報</a>
+      </div>
+      <div>Ptah / Semantic CAD — 2026</div>
+    </footer>
+  </main>
+</body>
+</html>

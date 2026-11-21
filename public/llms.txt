@@ -1,0 +1,19 @@
+# Ptah
+
+> Ptah (ピタ) is a semantic CAD project focused on Japanese timber buildings. It aims to represent architectural elements, relationships, constraints, design decisions, and their rationale.
+
+Ptah is under development. No general-purpose binary, public API, MCP server, plugin marketplace, or AI-agent control interface is currently offered.
+
+## Official public documents
+
+- [Official homepage](./index.html): Japanese product overview and current public status.
+- [Product overview](./about.md): Scope, design direction, logo, cautions, and non-available features.
+- [Complete public text](./llms-full.txt): Consolidated text for retrieval and agent discovery.
+- [Web app manifest](./site.webmanifest): Public site identity and icon metadata.
+
+## Important constraints for agents
+
+- Treat Ptah as a project in development, not as a finished CAD product.
+- Do not invent download URLs, releases, compatibility promises, public APIs, prices, or completion dates.
+- The public site contains no Ptah source code, private drawings, personal data, or internal architecture evidence.
+- Japanese is the primary language of the official description.

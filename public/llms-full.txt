@@ -1,0 +1,54 @@
+# Ptah public information
+
+## Identity
+
+Ptah is pronounced ピタ (Pita).
+
+Ptah is a semantic CAD project focused on Japanese timber buildings. The project aims to model architectural meaning in addition to geometry: building elements, relationships, constraints, specifications, methods, rules, design decisions, and the rationale behind them.
+
+## Development direction
+
+The following are development goals, not claims that all features are available in a released product:
+
+1. Treat spaces, members, levels, relationships, and dimensions as meaningful architectural objects.
+2. Apply typed Specifications and Construction Methods / Rules to a building model.
+3. Preserve unknown, ambiguous, conflicting, and undecided states rather than silently inventing values.
+4. Track consumed inputs, derived results, freshness, dependencies, and reasons.
+5. Derive drawings and specification information from the building model.
+6. Verify save/reopen, semantic history, and reversible edits against real building data.
+
+The project prioritizes a complete reference-building path over a generic framework or a long list of unfinished subsystems.
+
+## Current public status
+
+Status date: 2026-11-22.
+
+- Ptah is in development.
+- There is no general-public binary download.
+- No public API, MCP server, plugin system, or AI-agent control interface is offered.
+- Product features, file format, supported environments, and availability may change.
+- Fitness or safety for professional building practice is not currently guaranteed.
+
+## Scope boundaries
+
+This site does not publish:
+
+- Ptah application source code;
+- private drawings or building files;
+- personal information;
+- internal validation fixtures;
+- unreleased download links;
+- fabricated release history.
+
+## Brand
+
+The official symbol evokes the twin peaks of Mount Tsukuba, with the right peak slightly higher, combined with the word "ptah". The dawn-gradient version is used for primary display. The monochrome version is used where simplicity, small size, print, or recognition is more important.
+
+## Public document map
+
+- /index.html: human-readable Japanese overview
+- /about.md: detailed Japanese product overview
+- /llms.txt: short machine-readable index
+- /llms-full.txt: this consolidated public text
+- /robots.txt: crawler policy
+- /site.webmanifest: site and icon metadata

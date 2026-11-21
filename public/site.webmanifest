@@ -1,0 +1,22 @@
+{
+  "name": "Ptah — Semantic CAD",
+  "short_name": "Ptah",
+  "description": "日本の木造建築を中心に開発中のセマンティックCAD",
+  "lang": "ja",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#fafaf8",
+  "theme_color": "#26355f",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

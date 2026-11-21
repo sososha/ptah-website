@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ptah-official.pages.dev/sitemap.xml
