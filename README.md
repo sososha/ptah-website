@@ -11,6 +11,7 @@ This repository is intentionally separate from Ptah's application-development re
 - Build output directory: `public`
 - Production URL: `https://ptah-official.pages.dev/`
 - Deployment trigger: every push to `main`
+- Build configuration is maintained in Cloudflare Pages; the site is built from the `public/` directory without a build command.
 
 ## Updating the site
 
