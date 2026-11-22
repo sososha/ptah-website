@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Ptah（ピタ）は、日本の木造建築を中心に開発中のセマンティックCADです。形状だけでなく、建築要素・関係・拘束・設計判断とその根拠を扱います。">
+  <meta name="description" content="Ptah（ピタ）は建築の開発環境。建築をビルドする。そのビルド結果を、人間が確かめられる。木造住宅から始めるセマンティックCAD。開発中。">
   <meta name="theme-color" content="#26355f">
   <meta name="color-scheme" content="light">
   <link rel="canonical" href="https://ptah-official.pages.dev/">
@@ -11,15 +11,15 @@
   <meta property="og:url" content="https://ptah-official.pages.dev/">
   <meta property="og:locale" content="ja_JP">
   <meta property="og:site_name" content="Ptah">
-  <meta property="og:title" content="Ptah（ピタ）— セマンティックCAD">
-  <meta property="og:description" content="建築を、意味から記述する。日本の木造建築を中心に開発中のセマンティックCAD。">
+  <meta property="og:title" content="Ptah — 建築をビルドする">
+  <meta property="og:description" content="建築をビルドする。そのビルド結果を、人間が確かめられる。建築の開発環境 Ptah。">
   <meta property="og:image" content="https://ptah-official.pages.dev/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Ptah — Semantic CAD for Japanese timber buildings">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Ptah（ピタ）— セマンティックCAD">
-  <meta name="twitter:description" content="建築を、意味から記述する。日本の木造建築を中心に開発中。">
+  <meta name="twitter:title" content="Ptah — 建築をビルドする">
+  <meta name="twitter:description" content="建築をビルドする。そのビルド結果を、人間が確かめられる。">
   <meta name="twitter:image" content="https://ptah-official.pages.dev/og-image.png">
   <link rel="manifest" href="site.webmanifest">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -38,7 +38,7 @@
         "@type": "WebSite",
         "name": "Ptah",
         "alternateName": "ピタ",
-        "description": "日本の木造建築を中心に開発中のセマンティックCAD、Ptahの公式サイト。",
+        "description": "建築の開発環境Ptahの公式サイト。木造住宅から始めるセマンティックCAD。開発中。",
         "url": "https://ptah-official.pages.dev/",
         "inLanguage": "ja",
         "image": "https://ptah-official.pages.dev/og-image.png"
@@ -49,158 +49,187 @@
         "alternateName": "ピタ",
         "applicationCategory": "DesignApplication",
         "creativeWorkStatus": "https://schema.org/Prototype",
-        "description": "日本の木造建築を中心に、建築要素、関係、拘束、設計判断と根拠を扱う開発中のセマンティックCAD。一般向けダウンロードはまだ提供されていません。",
+        "description": "木造住宅から始める建築の開発環境。建築モデル、ルール、判断と根拠を扱う開発中のセマンティックCAD。一般向けダウンロードはまだありません。",
         "url": "https://ptah-official.pages.dev/",
         "inLanguage": ["ja"]
       }
     ]
   }
   </script>
-  <title>Ptah（ピタ）— セマンティックCAD</title>
+  <title>Ptah（ピタ）— 建築をビルドする</title>
   <style>
     :root { color-scheme: light; }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body {
-      margin: 0;
-      background: #fafaf8;
-      color: #20262c;
-      font: 16px/1.85 -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+      margin: 0; background: #fafaf8; color: #20262c;
+      font: 15px/1.8 -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
     }
-    .skip-link {
-      position: absolute;
-      left: 12px;
-      top: -80px;
-      z-index: 10;
-      padding: 8px 12px;
-      background: #fff;
-      color: #124b95;
-    }
+    a { color: #164a8b; text-decoration: underline; text-underline-offset: 3px; }
+    a:hover { color: #0a315f; }
+    a:focus-visible { outline: 2px solid #164a8b; outline-offset: 3px; }
+    .skip-link { position: absolute; top: -80px; left: 12px; z-index: 10; padding: 8px 12px; background: white; }
     .skip-link:focus { top: 12px; }
-    main { width: min(100% - 44px, 760px); margin: 0 auto; padding: 70px 0 64px; }
-    a { color: #124b95; text-decoration: underline; text-underline-offset: 3px; }
-    a:hover { color: #052d64; }
-    a:focus-visible { outline: 2px solid #124b95; outline-offset: 3px; }
-    header { padding-bottom: 36px; border-bottom: 1px solid #c9cdd0; }
-    .eyebrow {
-      font: 12px/1.4 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-      color: #636b72;
-      letter-spacing: .10em;
-    }
-    .site-brand { display: flex; align-items: center; gap: 16px; }
-    .site-brand img { width: 76px; height: 76px; flex: none; }
-    h1 { margin: 10px 0 6px; font: 600 clamp(55px, 10vw, 80px)/1.12 Georgia, "Times New Roman", serif; letter-spacing: -.055em; }
-    .lead { margin: 20px 0 12px; font-size: clamp(18px, 3vw, 21px); font-weight: 600; line-height: 1.6; }
-    .intro { margin: 0; max-width: 39em; color: #3e454c; }
-    .flag {
-      display: inline-block;
-      margin-top: 23px;
-      border: 1px solid #aab2b8;
-      padding: 2px 10px;
-      font-size: 12px;
-      color: #46525e;
-    }
-    nav { padding: 26px 0 28px; }
-    nav ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 3px; }
-    nav li::before { content: "●"; font-size: 8px; margin-right: 10px; color: #67737b; vertical-align: 2px; }
-    section { padding: 24px 0 30px; border-top: 1px solid #d8dce0; }
-    h2 { margin: 0 0 12px; font-size: 17px; font-weight: 700; }
-    h3 { margin: 20px 0 5px; font-size: 15px; }
+    main { width: min(calc(100% - 48px), 1000px); margin: 0 auto; padding: 58px 0 55px; }
+    .hero { border-bottom: 1px solid #cdd1d2; padding-bottom: 32px; }
+    .eyebrow { font: 11px/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; color: #666f76; letter-spacing: .085em; }
+    .site-brand { display: flex; align-items: center; gap: 13px; margin-top: 13px; }
+    .site-brand img { width: 60px; height: 60px; }
+    h1 { margin: 0; font: 600 clamp(53px, 9vw, 75px)/1.12 Georgia, "Times New Roman", serif; letter-spacing: -.06em; }
+    .lead { margin: 28px 0 2px; font-size: clamp(24px, 4.8vw, 33px); line-height: 1.45; font-weight: 650; letter-spacing: -.04em; }
+    .hero-second { margin: 0; font-size: clamp(17px, 3.1vw, 21px); line-height: 1.75; }
+    .intro { margin: 19px 0 0; max-width: 44em; color: #454d54; }
+    .flag { display: inline-block; margin-top: 17px; padding: 2px 9px; border: 1px solid #b3bac0; font-size: 11px; color: #4a555f; }
+    .site-layout { display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: 53px; align-items: start; }
+    .site-nav { position: sticky; top: 25px; padding-top: 30px; font-size: 13px; }
+    .site-nav ul { list-style: none; margin: 0; padding: 0; }
+    .site-nav li { margin: 0 0 12px; }
+    .site-nav a { color: #384652; }
+    .content { min-width: 0; }
+    section { padding: 31px 0 34px; border-bottom: 1px solid #d8dcde; scroll-margin-top: 20px; }
+    h2 { margin: 0 0 12px; font-size: 18px; line-height: 1.5; }
     p { margin: 0 0 13px; }
     p:last-child { margin-bottom: 0; }
-    .plain-list { margin: 0; padding-left: 1.25rem; }
+    .sub { font-size: 13px; color: #5a646d; }
+    .plain-list { margin: 10px 0 0; padding-left: 1.3rem; }
     .plain-list li + li { margin-top: 5px; }
-    .note { border-left: 3px solid #aab2b8; padding-left: 14px; color: #4f5860; }
-    .muted { color: #697179; }
-    footer { border-top: 1px solid #c9cdd0; padding-top: 19px; font-size: 12px; color: #626b73; }
-    .footer-links { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 0 0 8px; }
-    .visit-counter {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px 20px;
-      margin: 0 0 10px;
-      font-variant-numeric: tabular-nums;
+    .rule { border-left: 2px solid #96a7b0; margin-top: 17px; padding-left: 14px; }
+    .pipeline { margin: 19px 0 13px; padding: 18px 17px; border: 1px solid #cdd4d8; background: #fff; }
+    .pipeline-row { display: flex; gap: 10px; align-items: stretch; justify-content: center; }
+    .pipeline-item { display: flex; flex: 1; min-width: 0; align-items: center; justify-content: center; text-align: center; border: 1px solid #cbd2d7; padding: 12px 7px; background: #fafaf8; font-size: 13px; }
+    .pipeline-item.core { border-color: #7f96a1; background: #f1f5f5; font-weight: 600; }
+    .flow-link { width: 2px; height: 25px; margin: 0 auto; background: #c1cbd1; position: relative; overflow: hidden; }
+    .flow-link::after {
+      content: ""; position: absolute; width: 2px; height: 9px; left: 0; top: -9px;
+      background: #3c789a; animation: flow 3s ease-in-out infinite;
     }
-    .visit-counter strong { color: #20262c; font-weight: 700; }
-    .counter-note { margin-top: 4px; font-size: 11px; }
-    @media (max-width: 530px) {
-      main { padding-top: 44px; }
-      header { padding-bottom: 30px; }
-      .site-brand img { width: 64px; height: 64px; }
+    .pipeline-details { margin: 6px 0 0; text-align: center; color: #5a646d; font-size: 12px; }
+    .tiny { color: #67717a; font-size: 12px; }
+    .status-lines { margin: 16px 0 0; padding: 0; list-style: none; }
+    .status-lines li { display: flex; gap: 12px; align-items: baseline; margin-bottom: 7px; }
+    .status-lines span { flex: none; min-width: 62px; color: #68737b; font-size: 12px; }
+    .muted { color: #667079; }
+    footer { padding: 23px 0 8px; font-size: 12px; color: #647078; }
+    .visit-counter { display: flex; flex-wrap: wrap; gap: 8px 19px; margin-bottom: 10px; font-variant-numeric: tabular-nums; }
+    .visit-counter strong { color: #20262c; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 7px 17px; margin-bottom: 7px; }
+    .counter-note { font-size: 11px; }
+    @keyframes flow { 0% { transform: translateY(0); opacity: 0; } 25% { opacity: 1; } 85% { opacity: 1; } 100% { transform: translateY(34px); opacity: 0; } }
+    @media (max-width: 760px) {
+      main { width: min(calc(100% - 36px), 700px); padding-top: 32px; }
+      .hero { padding-bottom: 24px; }
+      .site-brand img { width: 52px; height: 52px; }
+      .site-layout { display: block; }
+      .site-nav { position: static; padding: 17px 0 7px; border-bottom: 1px solid #d8dcde; }
+      .site-nav ul { display: flex; flex-wrap: wrap; gap: 7px 19px; }
+      .site-nav li { margin: 0; }
+      section { padding: 25px 0 27px; }
     }
-    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    @media (max-width: 430px) {
+      .pipeline { padding: 13px 8px; }
+      .pipeline-row { gap: 5px; }
+      .pipeline-item { padding: 10px 3px; font-size: 12px; }
+      .status-lines li { display: block; }
+      .status-lines span { display: block; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .flow-link::after { animation: none; height: 0; }
+    }
   </style>
 </head>
 <body>
   <a class="skip-link" href="#content">本文へ移動</a>
   <main id="content">
-    <header>
-      <div class="eyebrow">SEMANTIC CAD / BUILDING DECISION MODEL</div>
+    <header class="hero" id="top">
+      <div class="eyebrow">SEMANTIC CAD / BUILDING DEVELOPMENT ENVIRONMENT</div>
       <div class="site-brand">
-        <img src="ptah-dawn.png" alt="" width="76" height="76">
+        <img src="ptah-dawn.png" alt="" width="60" height="60">
         <h1>Ptah</h1>
       </div>
-      <p class="lead">建築を、意味から記述する。</p>
-      <p class="intro">Ptah（ピタ）は、日本の木造建築を中心に開発中のセマンティックCADです。形だけでなく、建築要素の関係、拘束、設計判断とその根拠を扱います。</p>
-      <span class="flag">開発中 / Development in progress</span>
+      <p class="lead">建築をビルドする。</p>
+      <p class="hero-second">そのビルド結果を、人間が確かめられる。</p>
+      <p class="intro">Ptah（ピタ）は、日本の木造住宅から始める、建築の開発環境です。人が画面で設計しても、将来AIに依頼しても、同じ建築モデルとルールを扱うことを目指しています。</p>
+      <span class="flag">開発中 / 一般公開前</span>
     </header>
-
-    <nav aria-label="ページ内メニュー">
-      <ul>
-        <li><a href="#about">Ptahについて</a></li>
-        <li><a href="#direction">目指す機能</a></li>
-        <li><a href="#status">公開状況</a></li>
-        <li><a href="#documents">公開文書</a></li>
-      </ul>
-    </nav>
-
-    <section id="about">
-      <h2>Ptahについて</h2>
-      <p>Ptahは、建築を線や面だけの集合ではなく、意味のある要素と関係のモデルとして扱うCADを目指しています。何を配置したかだけでなく、なぜその値や関係が採用されたかを追跡できることが、設計意図を保つために重要だと考えています。</p>
-      <p>開発の重点は日本の木造建築です。一般化した汎用基盤の完成度ではなく、実在の建築を最後まで扱えることを重視して開発しています。</p>
-    </section>
-
-    <section id="direction">
-      <h2>目指す機能</h2>
-      <p class="note">以下は製品の方向性です。現在の配布版で完成済みであることを意味しません。</p>
-      <ul class="plain-list">
-        <li>建築要素、部材、空間、階、寸法関係などを意味のある対象として扱う</li>
-        <li>仕様（Specification）と施工方法・ルール（Method / Rule）を設計モデルへ適用する</li>
-        <li>曖昧さ、不足、矛盾、未決定事項を隠さず保持する</li>
-        <li>入力と計算結果の根拠、依存関係、鮮度を追跡する</li>
-        <li>建築モデルから図面や仕様情報などの成果物を導出する</li>
-        <li>保存・再開と履歴を、設計上の意味を保ったまま扱う</li>
-      </ul>
-    </section>
-
-    <section id="status">
-      <h2>公開状況</h2>
-      <p>Ptahは現在開発中です。一般向けバイナリ、価格、公開API、MCPサーバー、プラグイン、AIエージェント向け操作環境は、このサイトでは提供していません。</p>
-      <p>機能、データ形式、更新時期は開発に応じて変更される可能性があります。現時点で実務利用に関する適合性・安全性を保証するものではありません。</p>
-    </section>
-
-    <section id="documents">
-      <h2>公開文書</h2>
-      <p>人とAIエージェントが、Ptahの用途と公開範囲を確認できる文書を用意しています。</p>
-      <ul class="plain-list">
-        <li><a href="about.md">製品概要（Markdown）</a> — 目的、開発状態、提供していないもの</li>
-        <li><a href="llms.txt">llms.txt</a> — AIエージェント向けの公開情報インデックス</li>
-        <li><a href="llms-full.txt">llms-full.txt</a> — 参照しやすい統合テキスト</li>
-      </ul>
-    </section>
-
-    <footer>
-      <div class="visit-counter" id="visit-counter" aria-label="公開開始後の推定アクセス数">
-        <span>来訪者 <strong id="human-visits">—</strong></span>
-        <span>AIアクセス <strong id="ai-visits">—</strong></span>
+    <div class="site-layout">
+      <nav class="site-nav" aria-label="ページ内メニュー">
+        <ul>
+          <li><a href="#top">はじめに</a></li>
+          <li><a href="#how">どう使うか</a></li>
+          <li><a href="#workflow">しくみ</a></li>
+          <li><a href="#status">開発状況</a></li>
+          <li><a href="#extend">拡張について</a></li>
+          <li><a href="#documents">資料</a></li>
+        </ul>
+      </nav>
+      <div class="content">
+        <section id="how">
+          <h2>設計して、ビルドして、確かめる</h2>
+          <p>間取りを考える。柱や梁を決める。建具や納まりを調整する。建築モデルから、図面や仕様を取り出す。</p>
+          <p>変更したら、関係する部分を再計算する。問題や未確定事項があれば、その理由をたどる。</p>
+          <p class="sub">建築そのものを編集し、結果を確認する。Ptahが目指す仕事の流れです。</p>
+        </section>
+        <section id="workflow">
+          <h2>人もAIも、同じ建築を扱う</h2>
+          <p>画面、チャット、外部ツール。入口が違っても、建築の意味と判断の根拠は同じところに残す。</p>
+          <div class="pipeline" role="img" aria-label="人の操作や将来のAI操作からPtahの建築モデルとルールに入力し、図面・数量・検証へ導出する構想図">
+            <div class="pipeline-row">
+              <div class="pipeline-item">人が操作</div>
+              <div class="pipeline-item">AIに依頼</div>
+            </div>
+            <div class="flow-link" aria-hidden="true"></div>
+            <div class="pipeline-row">
+              <div class="pipeline-item core">Ptah Engine<br>建築モデル × Rule</div>
+            </div>
+            <div class="flow-link" aria-hidden="true"></div>
+            <div class="pipeline-row">
+              <div class="pipeline-item">図面・3D</div>
+              <div class="pipeline-item">数量・見積</div>
+              <div class="pipeline-item">検証・根拠</div>
+            </div>
+            <p class="pipeline-details">設計 → Build → Test → 確認</p>
+          </div>
+          <p class="tiny">この図は目標とする処理の概念図です。AI操作、数量・見積、総合的な検証は一般提供されていません。</p>
+        </section>
+        <section id="status">
+          <h2>開発状況</h2>
+          <p>現在、木造住宅の実例を使い、建築モデル、部材と納まりのルール、2D・3Dの表現、図面の生成を実装・検証しています。</p>
+          <ul class="status-lines">
+            <li><span>内部検証</span>建築モデル、Rule、図面表現など</li>
+            <li><span>開発目標</span>数量・見積、各種検証、AIからの操作</li>
+            <li><span>未公開</span>一般向けアプリ、公開API、MCP、プラグイン</li>
+          </ul>
+          <p class="sub">一般向けのダウンロードはまだありません。開発中のため、実務利用への適合性や安全性は保証していません。</p>
+        </section>
+        <section id="extend">
+          <h2>自分の仕事に合わせて育てる</h2>
+          <p>PtahはRustで開発しています。建築知識をRuleとして記述し、将来はWASMプラグインなどで機能を追加・共有できる環境を目指しています。</p>
+          <p class="sub">プラグインの一般提供は準備中です。ソースコードの公開範囲とライセンスは検討中で、現時点でOSSとして公開しているわけではありません。</p>
+        </section>
+        <section id="documents">
+          <h2>資料</h2>
+          <ul class="plain-list">
+            <li><a href="about.md">製品概要</a></li>
+            <li><a href="llms.txt">AI向け公開情報</a></li>
+            <li><a href="llms-full.txt">公開情報の統合テキスト</a></li>
+          </ul>
+        </section>
+        <footer>
+          <div class="visit-counter" id="visit-counter" aria-label="公開開始後の推定アクセス数">
+            <span>来訪者 <strong id="human-visits">—</strong></span>
+            <span>AIアクセス <strong id="ai-visits">—</strong></span>
+          </div>
+          <div class="footer-links">
+            <a href="about.md">概要</a>
+            <a href="https://github.com/sososha/ptah-website">このサイトのGitHub</a>
+            <a href="llms.txt">AI向け情報</a>
+          </div>
+          <div>Ptah — 建築の開発環境 / 2026</div>
+          <div class="counter-note">来訪者は24時間Cookieで重複を抑えた推定値、AIはBot User-Agentに基づくアクセス要求の推定値です。</div>
+        </footer>
       </div>
-      <div class="footer-links">
-        <a href="about.md">概要</a>
-        <a href="llms.txt">AI向け情報</a>
-      </div>
-      <div>Ptah / Semantic CAD — 2026</div>
-      <div class="counter-note">来訪者は24時間Cookieで重複を抑えた推定値、AIは公開されているBot User-Agentを持つアクセス要求の推定値です。</div>
-    </footer>
+    </div>
   </main>
 </body>
 </html>
