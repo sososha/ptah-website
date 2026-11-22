@@ -1,54 +1,53 @@
 # Ptah public information
 
-## Identity
+## Identity and concept
 
-Ptah is pronounced ピタ (Pita).
+Ptah (pronounced ピタ, Pita) is an architecture development environment and semantic CAD project, initially focused on Japanese timber housing.
 
-Ptah is a semantic CAD project focused on Japanese timber buildings. The project aims to model architectural meaning in addition to geometry: building elements, relationships, constraints, specifications, methods, rules, design decisions, and the rationale behind them.
+Guiding statement: “建築をビルドする。そのビルド結果を、人間が確かめられる。” (Build architecture. Humans can inspect and verify the build results.)
+
+Ptah aims to support direct human design and eventual AI-agent operations through the same architecture model and execution of defined rules. Architecture is represented as meaningful building elements, specifications, relationships, constraints, decisions, and rationale, not merely geometric lines and surfaces.
+
+The term Build refers to deriving a building model and artifacts from design descriptions and rules. It does not mean autonomous physical construction. Derivation, validation, and human authorization are separate.
 
 ## Development direction
 
-The following are development goals, not claims that all features are available in a released product:
+These are development goals, not general-release feature claims:
 
-1. Treat spaces, members, levels, relationships, and dimensions as meaningful architectural objects.
-2. Apply typed Specifications and Construction Methods / Rules to a building model.
-3. Preserve unknown, ambiguous, conflicting, and undecided states rather than silently inventing values.
-4. Track consumed inputs, derived results, freshness, dependencies, and reasons.
-5. Derive drawings and specification information from the building model.
-6. Verify save/reopen, semantic history, and reversible edits against real building data.
+1. Model spaces, structural members, openings, storeys, constraints, and specifications as meaningful entities.
+2. Apply design and construction Methods / Rules to derive model elements.
+3. Preserve unknown, ambiguous, conflicting, and undecided states.
+4. Track consumed inputs, derived results, decisions, dependencies, and rationale.
+5. Derive 2D and 3D presentations, drawings, and eventually quantity and estimate outputs.
+6. Support verification, comparison, and human review of what changed and why.
+7. Eventually offer interfaces for AI agents, external tools, and WASM plugins.
 
-The project prioritizes a complete reference-building path over a generic framework or a long list of unfinished subsystems.
+The project uses Rust and prioritizes real timber-building cases over generic infrastructure.
 
 ## Current public status
 
-Status date: 2026-11-22.
+Status date: 2026-11-23.
 
-- Ptah is in development.
+- Ptah is in development. Internal implementations and verification exist for building models, rules, and 2D/3D drawing representations.
 - There is no general-public binary download.
 - No public API, MCP server, plugin system, or AI-agent control interface is offered.
-- Product features, file format, supported environments, and availability may change.
-- Fitness or safety for professional building practice is not currently guaranteed.
+- WASM plugin support and source-release/licensing terms are not yet publicly available or finalized.
+- Capabilities, formats, supported environments, and availability may change.
+- No claim of comprehensive professional fitness, structural safety, legal compliance, or construction readiness is made.
 
 ## Scope boundaries
 
-This site does not publish:
-
-- Ptah application source code;
-- private drawings or building files;
-- personal information;
-- internal validation fixtures;
-- unreleased download links;
-- fabricated release history.
+This public site does not publish Ptah application source code, private drawings or building files, personal information, internal validation fixtures, or unreleased download links.
 
 ## Brand
 
-The official symbol evokes the twin peaks of Mount Tsukuba, with the right peak slightly higher, combined with the word "ptah". The dawn-gradient version is used for primary display. The monochrome version is used where simplicity, small size, print, or recognition is more important.
+The official mark evokes the twin peaks of Mount Tsukuba, with the right peak slightly higher, and the word “ptah”. Dawn-gradient and monochrome versions are used according to context.
 
 ## Public document map
 
-- /index.html: human-readable Japanese overview
-- /about.md: detailed Japanese product overview
-- /llms.txt: short machine-readable index
-- /llms-full.txt: this consolidated public text
+- /index.html: Japanese official homepage
+- /about.md: Japanese product overview
+- /llms.txt: short discovery index
+- /llms-full.txt: consolidated text
 - /robots.txt: crawler policy
-- /site.webmanifest: site and icon metadata
+- /site.webmanifest: icon and site metadata
